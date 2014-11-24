@@ -65,6 +65,50 @@ Metrical parsing is done via [Prosodic](https://github.com/quadrismegistus/proso
 poem.parse()
 ```
 
+This loads each line in the ```lined``` dictionary into another dictionary, ```prosodic```, also keyed by Line ID, but this time each leading to a Prosodic "Text" object. A convenient way to look at the parses is using the ```parse_str()``` method:
+
+```python
+for lineid,lineObj in poem.prosodic.items():
+	print lineid,lineObj.parse_str()
+```
+This should return:
+```
+(1, 1) WHO|will|GO|drive.with*|FER|gus|NOW
+(2, 1) and|PIERCE|the|DEEP|wood's*|WOV|en|SHADE
+(3, 1) and|DANCE|up|ON|the|LE|vel|SHORE
+(4, 1) YOUNG|man*||LIFT|up.your|RU|sset|BROW
+(5, 1) and|LIFT|your|TEN|der|EYE|lids*||MAID
+(6, 1) and|BROOD|on|HOPES|and|FEAR|no*|MORE
+(7, 2) and|NO|more|TURN|as|IDE|and|BROOD
+(8, 2) up|ON|love's*|BI|tter|MY|st.ery
+(9, 2) for|FER|gus|RULES|the|BRA|zen|CARS
+(10, 2) and|RULES|the.sha*|DOWS|of.the|WOOD
+(11, 2) AND*|the.white*|BREAST|of.the|DIM|sea*
+(12, 2) and.all|DI|sh.evelled|WA|nd.ering|STARS
+```
+The * indicate a metrical violation occurred in that position. Also, ```parse_str()``` has two important keyword arguments: ```text``` and ```viols```, either of which can be ```True``` or ```False```. For instance, running the same command in this way:
+```python
+for lineid,lineObj in poem.prosodic.items():
+	print lineid,lineObj.parse_str(text=False, viols=False)
+```
+Returns:
+```
+(1, 1) s|w|s|ww|s|w|s
+(2, 1) w|s|w|s|w|s|w|s
+(3, 1) w|s|w|s|w|s|w|s
+(4, 1) s|w||s|ww|s|w|s
+(5, 1) w|s|w|s|w|s|w||s
+(6, 1) w|s|w|s|w|s|w|s
+(7, 2) w|s|w|s|w|s|w|s
+(8, 2) w|s|w|s|w|s|ww
+(9, 2) w|s|w|s|w|s|w|s
+(10, 2) w|s|ww|s|ww|s
+(11, 2) s|ww|s|ww|s|w
+(12, 2) ww|s|ww|s|ww|s
+```
+Which is a more abstract representation of the metrical output.
+
+
 ### Get statistics from poem's parsing
 
 There are essentially two domains of information that we are currently able to provide about a poem: its stanzaic structure (what we call its syllable scheme); and its metrical patterns. All of these are contained in another dictionary each poem object has, its ```statd``` -- but this becomes available _only_ after the ```poem.parse()``` command is executed. Here are the available statistics on a poem:
