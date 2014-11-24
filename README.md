@@ -11,8 +11,8 @@ The goal in the project is to develop software capable of annotating the followi
   * Alternating schemes (e.g. _Alt_8_6_ = the poem alternates between lines of 8 and 6 syllables in length. Most common in ballads)
   * Complex schemes (basically, everything more complex than the above two. Includes odes, free verse, etc)
 
-2. Metrical scheme [**Complete**]
-Produce a scansion of each of the poem's lines, and then decide if the poem's meter is predominantly:
+2. Metrical scheme [**Complete**]:
+  * Produce a scansion of each of the poem's lines, and then decide if the poem's meter is predominantly:
     1. Iambic (Binary foot, head final)
     2. Trochaic (Binary foot, head initial)
     3. Anapestic (Ternary foot, head final)
