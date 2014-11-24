@@ -5,11 +5,27 @@ Code used in the [Literary Lab](http://litlab.stanford.edu)'s [Trans-historical 
 
 The goal in the project is to develop software capable of annotating the following four features of poetic form:
 
-1. Stanzaic structure (Syllable scheme / beat scheme):
+1. Stanzaic scheme (Syllable scheme / beat scheme) [**Complete**]:
   * An example scheme is: _10_ (Invariable) or _8-6_ (Alternating) or _10-10-10-10-10-6_ (Complex)
   * Invariable schemes (e.g. Inv_10 = the poem is generally always in lines of 10 syllables in length, e.g. blank verse, sonnets, heroic couplets)
   * Alternating schemes (e.g. _Alt_8_6_ = the poem alternates between lines of 8 and 6 syllables in length. Most common in ballads)
   * Complex schemes (basically, everything more complex than the above two. Includes odes, free verse, etc)
+
+2. Metrical scheme [**Complete**]
+  * Produce a scansion of each of the poem's lines, and then decide if the poem's meter is predominantly:
+    1. Iambic (Binary foot, head final)
+    2. Trochaic (Binary foot, head initial)
+    3. Anapestic (Ternary foot, head final)
+    4. Dactylic (Ternary foot, head initial)
+
+3. Rhyme scheme [**Ongoing**]
+  * Determine the rhyme scheme of the poem.
+
+4. Synthetic form [**Ongoing**]
+  * From the above (#1-3) elements, decide if poem is, e.g.:
+    * Heroic couplets = ([1] Inv_10, [2] iambic, [3] aa)
+    * Blank verse = ([1] Inv_10, [2] iambic, [3] unrhymed)
+    * etc.
 
 
 ## Quick start
