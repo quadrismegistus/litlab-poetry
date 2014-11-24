@@ -1,7 +1,7 @@
 litlab-poetry
 =============
 
-Code used in the [Literary Lab](http://litlab.stanford.edu)'s [Trans-historical Poetry Project](http://litlab.stanford.edu/?page_id=13). We presented this project at DH2014 in Lausanne. Abstract is [here](http://dharchive.org/paper/DH2014/Paper-788.xml), but this is relatively uninformative. Slides (with notes) are [here](https://docs.google.com/presentation/d/1KyCi4s6P1fE4D3SlzlZPnXgPjwZvyv_Vt-aU3tlb24I/edit?usp=sharing). We plan to publish the results of these experiments into poetic form in the summer of 2015.
+Code used in the [Literary Lab](http://litlab.stanford.edu)'s [Trans-historical Poetry Project](http://litlab.stanford.edu/?page_id=13). We presented this project at DH2014 in Lausanne. Abstract is [here](http://dharchive.org/paper/DH2014/Paper-788.xml), but this is relatively uninformative. Slides (with notes) are [here](https://docs.google.com/presentation/d/1KyCi4s6P1fE4D3SlzlZPnXgPjwZvyv_Vt-aU3tlb24I/edit?usp=sharing). We plan to publish the results of our 2+ year project summer of 2015.
 
 ## Quick start
 ### Run Open Mary
@@ -18,7 +18,7 @@ The main module here is _pypoesy.py_ and the main class within it, _PoemTXT_. Po
 ```python
 import pypoesy
 
-poem = pypoesy.Poem("""Who will go drive with Fergus now,
+poem = pypoesy.PoemTXT("""Who will go drive with Fergus now,
 And pierce the deep wood's woven shade,
 And dance upon the level shore?
 Young man, lift up your russet brow,
@@ -54,6 +54,16 @@ This should return:
 (11, 2) And the white breast of the dim sea
 (12, 2) And all dishevelled wandering stars.
 ```
-As you can see, the Line ID is actually a tuple: (Line Number, Stanza Number).
+As you can see, the Line ID is actually a tuple of integers: (Line #, Stanza #).
 
-### Print 
+### Parse a poem metrically
+
+Metrical parsing is done via [Prosodic](https://github.com/quadrismegistus/prosodic), developed by Arto Antilla, Josh Falk, and Ryan Heuser. To parse a poem:
+
+```python
+poem.parse()
+```
+
+### Get statistics from poem's parsing
+
+There are essentially two domains of information that we are currently able to provide about a poem: its stanzaic structure (what we call its syllable scheme); and its metrical patterns. All of these are contained in another dictionary each poem object has, its ```statd```.
