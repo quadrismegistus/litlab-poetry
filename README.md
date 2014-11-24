@@ -82,9 +82,9 @@ This should return:
 (7, 2) and|NO|more|TURN|as|IDE|and|BROOD
 (8, 2) up|ON|love's*|BI|tter|MY|st.ery
 (9, 2) for|FER|gus|RULES|the|BRA|zen|CARS
-(10, 2) and|RULES|the.sha*|DOWS|of.the|WOOD
+(10, 2) and|RULES|the|SHA|dows|OF*|the|WOOD
 (11, 2) AND*|the.white*|BREAST|of.the|DIM|sea*
-(12, 2) and.all|DI|sh.evelled|WA|nd.ering|STARS
+(12, 2) and|ALL|di|SH|evelled|WA|nd.ering|STARS
 ```
 The * indicate a metrical violation occurred in that position. Also, ```parse_str()``` has two important keyword arguments: ```text``` and ```viols```, either of which can be ```True``` or ```False```. For instance, running the same command in this way:
 ```python
@@ -102,9 +102,9 @@ Returns:
 (7, 2) w|s|w|s|w|s|w|s
 (8, 2) w|s|w|s|w|s|ww
 (9, 2) w|s|w|s|w|s|w|s
-(10, 2) w|s|ww|s|ww|s
+(10, 2) w|s|w|s|w|s|w|s
 (11, 2) s|ww|s|ww|s|w
-(12, 2) ww|s|ww|s|ww|s
+(12, 2) w|s|w|s|w|s|ww|s
 ```
 Which is a more abstract representation of the metrical output.
 
@@ -114,32 +114,32 @@ Which is a more abstract representation of the metrical output.
 There are essentially two domains of information that we are currently able to provide about a poem: its stanzaic structure (what we call its syllable scheme); and its metrical patterns. All of these are contained in another dictionary each poem object has, its ```statd``` -- but this becomes available _only_ after the ```poem.parse()``` command is executed. Here are the available statistics on a poem:
 
 ```python
-for k,v in sorted(p.statd.items()):
-	print k,'\t',v
+for featname,featval in sorted(poem.statd.items()):
+	print featname,'\t',featval
 ```
 Should return:
 ```
 beat_scheme 	(4,)
-beat_scheme_diff 	4
+beat_scheme_diff 	2
 beat_scheme_length 	1
 beat_scheme_repr 	Inv_4
 beat_scheme_type 	Invariable
-meter_ambiguity 	3.08333333333
-meter_constraint_TOTAL 	0.137931034483
+meter_ambiguity 	3.0
+meter_constraint_TOTAL 	0.120879120879
 meter_constraint_footmin-no-s 	0.0
 meter_constraint_strength_s=>-u 	0.0
-meter_constraint_strength_w=>-p 	0.0229885057471
-meter_constraint_stress_s=>-u 	0.0114942528736
-meter_constraint_stress_w=>-p 	0.103448275862
+meter_constraint_strength_w=>-p 	0.010989010989
+meter_constraint_stress_s=>-u 	0.021978021978
+meter_constraint_stress_w=>-p 	0.0879120879121
 meter_length_avg_line 	8.08333333333
 meter_length_avg_parse 	6.92857142857
-meter_mpos_s 	0.505747126437
-meter_mpos_w 	0.379310344828
-meter_mpos_ww 	0.114942528736
+meter_mpos_s 	0.505494505495
+meter_mpos_w 	0.428571428571
+meter_mpos_ww 	0.0659340659341
 meter_perc_lines_ending_s 	0.833333333333
 meter_perc_lines_ending_w 	0.166666666667
-meter_perc_lines_fourthpos_s 	0.666666666667
-meter_perc_lines_fourthpos_w 	0.333333333333
+meter_perc_lines_fourthpos_s 	0.833333333333
+meter_perc_lines_fourthpos_w 	0.166666666667
 meter_perc_lines_starting_s 	0.25
 meter_perc_lines_starting_w 	0.75
 meter_type_foot 	binary
