@@ -1,0 +1,10 @@
+<marytts-install xmlns="http://mary.dfki.de/installer">
+  <language locale="sv" name="sv" version="5.0">
+    <description>sv language component</description>
+    <license href="http://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
+    <package filename="marytts-lang-sv-5.0.zip" md5sum="dummy" size="0">
+      <location href="http://mary.dfki.de/download/5.0/"/>
+    </package>
+    <files>lib/marytts-lang-sv-5.0.jar</files>
+  </language>
+</marytts-install>

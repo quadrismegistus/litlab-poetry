@@ -1,0 +1,12 @@
+java version "1.7.0_25"
+Java(TM) SE Runtime Environment (build 1.7.0_25-b15)
+Java HotSpot(TM) 64-Bit Server VM (build 23.25-b01, mixed mode)
+
+MARY server 5.0 starting as a HTTP server... started in 4.159 s
+2013-10-16 11:55:17.294 java[40840:4707] Connection with distnoted server was invalidated
+nohup: marytts-server.sh: No such file or directory
+java version "1.7.0_25"
+Java(TM) SE Runtime Environment (build 1.7.0_25-b15)
+Java HotSpot(TM) 64-Bit Server VM (build 23.25-b01, mixed mode)
+
+MARY server 5.0 starting as a HTTP server... started in 3.272 s

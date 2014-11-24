@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marytts-install xmlns="http://mary.dfki.de/installer">
+    <voice gender="female" locale="en-US" name="cmu-slt-hsmm"
+        type="hsmm" version="5.0">
+        <description>A female US English Hidden semi-Markov model voice, built from voice recordings provided by Carnegie Mellon University.</description>
+        <license href="http://mary.dfki.de/download/voices/arctic-license.html"/>
+        <package filename="voice-cmu-slt-hsmm-5.0.zip"
+            md5sum="9361c3d15d0376cc8a9145b58c024525" size="1240671">
+            <location href="http://mary.dfki.de/download/5.0/"/>
+        </package>
+        <files>lib/voice-cmu-slt-hsmm-5.0.jar</files>
+        <depends language="en-US" version="5.0"/>
+    </voice>
+</marytts-install>
