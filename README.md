@@ -1,7 +1,9 @@
 litlab-poetry
 =============
 
-Code used in the [Literary Lab](http://litlab.stanford.edu)'s [Trans-historical Poetry Project](http://litlab.stanford.edu/?page_id=13). We presented this project at DH2014 in Lausanne. Abstract is [here](http://dharchive.org/paper/DH2014/Paper-788.xml), but this is relatively uninformative. Slides (with notes) are [here](https://docs.google.com/presentation/d/1KyCi4s6P1fE4D3SlzlZPnXgPjwZvyv_Vt-aU3tlb24I/edit?usp=sharing). We plan to publish the results of our 2+ year project summer of 2015.
+Code used in the [Literary Lab](http://litlab.stanford.edu)'s [Trans-historical Poetry Project](http://litlab.stanford.edu/?page_id=13). The project is a collaborative one involving myself (Ryan Heuser) and Mark Algee-Hewitt, Maria Kraxenberger, J.D. Porter, Jonny Sensenbaugh, and Justin Tackett. We presented the project at DH2014 in Lausanne. The abstract is [here](http://dharchive.org/paper/DH2014/Paper-788.xml), but this is outdated and relatively uninformative. A better source of information is our slideshow (with notes) [here](https://docs.google.com/presentation/d/1KyCi4s6P1fE4D3SlzlZPnXgPjwZvyv_Vt-aU3tlb24I/edit?usp=sharing). We plan to publish the results of our 2+ year project summer of 2015.
+
+
 
 ## Quick start
 ### Run Open Mary
@@ -66,4 +68,45 @@ poem.parse()
 
 ### Get statistics from poem's parsing
 
-There are essentially two domains of information that we are currently able to provide about a poem: its stanzaic structure (what we call its syllable scheme); and its metrical patterns. All of these are contained in another dictionary each poem object has, its ```statd```.
+There are essentially two domains of information that we are currently able to provide about a poem: its stanzaic structure (what we call its syllable scheme); and its metrical patterns. All of these are contained in another dictionary each poem object has, its ```statd``` -- but this becomes available _only_ after the ```poem.parse()``` command is executed. Here are the available statistics on a poem:
+
+```python
+for k,v in sorted(p.statd.items()):
+	print k,'\t',v
+```
+Should return:
+```
+beat_scheme 	(4,)
+beat_scheme_diff 	4
+beat_scheme_length 	1
+beat_scheme_repr 	Inv_4
+beat_scheme_type 	Invariable
+meter_ambiguity 	3.08333333333
+meter_constraint_TOTAL 	0.137931034483
+meter_constraint_footmin-no-s 	0.0
+meter_constraint_strength_s=>-u 	0.0
+meter_constraint_strength_w=>-p 	0.0229885057471
+meter_constraint_stress_s=>-u 	0.0114942528736
+meter_constraint_stress_w=>-p 	0.103448275862
+meter_length_avg_line 	8.08333333333
+meter_length_avg_parse 	6.92857142857
+meter_mpos_s 	0.505747126437
+meter_mpos_w 	0.379310344828
+meter_mpos_ww 	0.114942528736
+meter_perc_lines_ending_s 	0.833333333333
+meter_perc_lines_ending_w 	0.166666666667
+meter_perc_lines_fourthpos_s 	0.666666666667
+meter_perc_lines_fourthpos_w 	0.333333333333
+meter_perc_lines_starting_s 	0.25
+meter_perc_lines_starting_w 	0.75
+meter_type_foot 	binary
+meter_type_head 	final
+meter_type_scheme 	iambic
+num_lines 	12
+num_lines_group 	0011-20
+syll_scheme 	(8,)
+syll_scheme_diff 	1
+syll_scheme_length 	1
+syll_scheme_repr 	Inv_8
+syll_scheme_type 	Invariable
+```
