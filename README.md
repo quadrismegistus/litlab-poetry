@@ -177,3 +177,8 @@ syll_scheme_length 	1
 syll_scheme_repr 	Inv_8
 syll_scheme_type 	Invariable
 ```
+
+The relevant keys corresponding to our goals #1 and #2 (above, at the top of this readme) are:
+
+1. ```syll_scheme_repr```
+2. ```meter_type_scheme```
