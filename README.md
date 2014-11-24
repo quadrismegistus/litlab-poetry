@@ -180,5 +180,5 @@ syll_scheme_type 	Invariable
 
 The relevant keys corresponding to our goals #1 and #2 (above, at the top of this readme) are:
 
-1. ```syll_scheme_repr```
-2. ```meter_type_scheme```
+1. ```syll_scheme_repr``` - In this case, Inv_8, meaning lines are invariably eight lines long. [In scheme, not in actuality.]
+2. ```meter_type_scheme``` - In this case, iambic, meaning feet are generally binary with their stress at the end (head final).
