@@ -3,6 +3,13 @@ litlab-poetry
 
 Code used in the [Literary Lab](http://litlab.stanford.edu)'s [Trans-historical Poetry Project](http://litlab.stanford.edu/?page_id=13), involving myself ([Ryan Heuser](http://twitter.com/quadrismegistus)), [Mark Algee-Hewitt](https://twitter.com/mark_a_h), Maria Kraxenberger, J.D. Porter, Jonny Sensenbaugh, and Justin Tackett. We presented the project at DH2014 in Lausanne. The abstract is [here](http://dharchive.org/paper/DH2014/Paper-788.xml), but a better source of information is our slideshow (with notes) [here](https://docs.google.com/presentation/d/1KyCi4s6P1fE4D3SlzlZPnXgPjwZvyv_Vt-aU3tlb24I/edit?usp=sharing). We plan to publish the results of our 2+ year project as a Lab pamphlet sometime in 2015.
 
+The goal in the project is to develop software capable of annotating the following four features of poetic form:
+1. Stanzaic structure (Syllable scheme / beat scheme):
+  * An example scheme is: _10_ (Invariable) or _8-6_ (Alternating) or _10-10-10-10-10-6_ (Complex)
+  * Invariable schemes (e.g. Inv_10 = the poem is generally always in lines of 10 syllables in length, e.g. blank verse, sonnets, heroic couplets)
+  * Alternating schemes (e.g. _Alt_8_6_ = the poem alternates between lines of 8 and 6 syllables in length. Most common in ballads)
+  * Complex schemes (basically, everything more complex than the above two. Includes odes, free verse, etc)
+
 
 ## Quick start
 ### Run Open Mary
@@ -111,7 +118,7 @@ Which is a more abstract representation of the metrical output.
 
 ### Get statistics from poem's parsing
 
-There are essentially two domains of information that we are currently able to provide about a poem: its stanzaic structure (what we call its syllable scheme); and its metrical patterns. All of these are contained in another dictionary each poem object has, its ```statd``` -- but this becomes available _only_ after the ```poem.parse()``` command is executed. Here are the available statistics on a poem:
+All of these are contained in another dictionary each poem object has, its ```statd``` -- but this becomes available _only_ after the ```poem.parse()``` command is executed. Here are the available statistics on a poem:
 
 ```python
 for featname,featval in sorted(poem.statd.items()):
