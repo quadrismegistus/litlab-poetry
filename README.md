@@ -92,7 +92,7 @@ poem.parse()
 This loads each line in the ```lined``` dictionary into another dictionary, ```prosodic```, also keyed by Line ID, but this time each leading to a Prosodic "Text" object. A convenient way to look at the parses is using the ```parse_str()``` method:
 
 ```python
-for lineid,lineObj in poem.prosodic.items():
+for lineid,lineObj in sorted(poem.prosodic.items()):
 	print lineid,lineObj.parse_str()
 ```
 This should return:
@@ -112,7 +112,7 @@ This should return:
 ```
 The * indicate a metrical violation occurred in that position. Also, ```parse_str()``` has two important keyword arguments: ```text``` and ```viols```, either of which can be ```True``` or ```False```. For instance, running the same command in this way:
 ```python
-for lineid,lineObj in poem.prosodic.items():
+for lineid,lineObj in sorted(poem.prosodic.items()):
 	print lineid,lineObj.parse_str(text=False, viols=False)
 ```
 Returns:
