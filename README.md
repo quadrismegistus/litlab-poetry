@@ -40,7 +40,7 @@ for lineid,line in sorted(poem.lined.items()):
 	print lineid,line
 ```
 This should return:
-```bash
+```
 (1, 1) Who will go drive with Fergus now,
 (2, 1) And pierce the deep wood's woven shade,
 (3, 1) And dance upon the level shore?
@@ -54,5 +54,6 @@ This should return:
 (11, 2) And the white breast of the dim sea
 (12, 2) And all dishevelled wandering stars.
 ```
+As you can see, the Line ID is actually a tuple: (Line Number, Stanza Number).
 
 ### Print 
