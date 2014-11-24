@@ -17,12 +17,17 @@ The main module here is _pypoesy.py_ and the main class within it, _PoemTXT_. Po
 
 ```python
 import pypoesy as pp
-sonnet = pp.Poem("""A tree there is that from its topmost bough
-Is half all glittering flame and half all green
-Abounding foliage moistened with the dew;
-And half is half and yet is all the scene;
-And half and half consume what they renew,
-And he that Attis' image hangs between
-That staring fury and the blind lush leaf
-May know not what he knows, but knows not grief""")
+poem = pp.Poem("""Who will go drive with Fergus now,
+And pierce the deep wood's woven shade,
+And dance upon the level shore?
+Young man, lift up your russet brow,
+And lift your tender eyelids, maid,
+And brood on hopes and fear no more.
+
+And no more turn aside and brood
+Upon love's bitter mystery;
+For Fergus rules the brazen cars,
+And rules the shadows of the wood,
+And the white breast of the dim sea
+And all dishevelled wandering stars.""")
 ```
