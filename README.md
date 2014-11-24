@@ -110,7 +110,7 @@ This should return:
 (11, 2) AND*|the.white*|BREAST|of.the|DIM|sea*
 (12, 2) and|ALL|di|SH|evelled|WA|nd.ering|STARS
 ```
-Please note that the syllabification by the | character is bad ("approximate") only here, in terms of orthography: underneath, the syllabification is much more exact in terms of the phonetic representation of each word. The * indicate a metrical violation occurred in that position. Also, ```parse_str()``` has two important keyword arguments: ```text``` and ```viols```, either of which can be ```True``` or ```False```. For instance, running the same command in this way:
+Please note that the syllabification by the | character is bad (or, "approximate") only here, in terms of orthography: underneath, the syllabification is much more exact in terms of the phonetic representation of each word. The * indicate a metrical violation occurred in that position. Also, ```parse_str()``` has two important keyword arguments: ```text``` and ```viols```, either of which can be ```True``` or ```False```. For instance, running the same command in this way:
 ```python
 for lineid,lineObj in sorted(poem.prosodic.items()):
 	print lineid,lineObj.parse_str(text=False, viols=False)
