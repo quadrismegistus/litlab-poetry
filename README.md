@@ -38,7 +38,7 @@ cd marytts-5.0/bin/
 ```
 
 ### Loading a poem
-The main module here is _pypoesy.py_ and the main class within it, _PoemTXT_. PoemTXT actually runs off of the class Poem, but this was built explicitly for the purpose of running poems stored in a custom data format for Chadwyck's XML files, so I've added _PoemTXT_ in order to allow the loading of poems as strings, with a double line-break indicating a stanzaic break:
+The main module here is ```pypoesy.py``` and the main class within it, ```PoemTXT```. ```PoemTXT``` actually inherits from the class ```Poem```, but this latter class was built explicitly for the purpose of running poems stored in a custom data format for Chadwyck's XML files, so I've added ```PoemTXT``` in order to allow the loading of poems as strings, with a double line-break indicating a stanzaic break:
 
 ```python
 import pypoesy
@@ -58,7 +58,7 @@ And the white breast of the dim sea
 And all dishevelled wandering stars.""")
 ```
 
-This loads the poem into the _lined_ property of the object, which is a dictionary keyed by the Line ID and whose value is a string representation of the line. When looping over the lines in a poem, make sure to sort as you go:
+This loads the poem into the ```lined``` property of the object, which is a dictionary keyed by the Line ID and whose value is a string representation of the line. When looping over the lines in a poem, make sure to sort as you go:
 
 ```python
 for lineid,line in sorted(poem.lined.items()):
@@ -130,7 +130,7 @@ Returns:
 (11, 2) s|ww|s|ww|s|w
 (12, 2) w|s|w|s|w|s|ww|s
 ```
-Which is a more abstract representation of the metrical output.
+Which is a more abstract representation of the metrical output. For more on what you can do with the objects stored in the ```poem.prosodic``` dictionary, see [Prosodic](https://github.com/quadrismegistus/prosodic) (especially the README there), as well as this [Documentation page](https://github.com/quadrismegistus/prosodic/wiki/Documentation).
 
 
 ### Get statistics from poem's parsing
