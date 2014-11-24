@@ -12,12 +12,13 @@ cd marytts-5.0/bin/
 ./marytts-server.sh
 ```
 
-### Parse a poem
-The main module here is _pypoesy.py_ and the main class within it, _PoemTXT_. PoemTXT actually runs off of the class Poem, but this was built explicitly for the purpose of running poems stored in a custom data format for Chadwyck's XML files.
+### Loading a poem
+The main module here is _pypoesy.py_ and the main class within it, _PoemTXT_. PoemTXT actually runs off of the class Poem, but this was built explicitly for the purpose of running poems stored in a custom data format for Chadwyck's XML files, so I've added _PoemTXT_ in order to allow the loading of poems as strings, with a double line-break indicating a stanzaic break:
 
 ```python
-import pypoesy as pp
-poem = pp.Poem("""Who will go drive with Fergus now,
+import pypoesy
+
+poem = pypoesy.Poem("""Who will go drive with Fergus now,
 And pierce the deep wood's woven shade,
 And dance upon the level shore?
 Young man, lift up your russet brow,
@@ -31,3 +32,27 @@ And rules the shadows of the wood,
 And the white breast of the dim sea
 And all dishevelled wandering stars.""")
 ```
+
+This loads the poem into the _lined_ property of the object, which is a dictionary keyed by the Line ID and whose value is a string representation of the line. When looping over the lines in a poem, make sure to sort as you go:
+
+```python
+for lineid,line in sorted(poem.lined.items()):
+	print lineid,line
+```
+This should return:
+```bash
+(1, 1) Who will go drive with Fergus now,
+(2, 1) And pierce the deep wood's woven shade,
+(3, 1) And dance upon the level shore?
+(4, 1) Young man, lift up your russet brow,
+(5, 1) And lift your tender eyelids, maid,
+(6, 1) And brood on hopes and fear no more.
+(7, 2) And no more turn aside and brood
+(8, 2) Upon love's bitter mystery;
+(9, 2) For Fergus rules the brazen cars,
+(10, 2) And rules the shadows of the wood,
+(11, 2) And the white breast of the dim sea
+(12, 2) And all dishevelled wandering stars.
+```
+
+### Print 
