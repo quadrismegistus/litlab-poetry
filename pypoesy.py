@@ -1616,7 +1616,7 @@ def openmary(line,lang='en_US',fix_contractions=True):
 
 class PoemTXT(Poem):
 	def __init__(self,txt,id=None,title=None):
-		self.id=pytxt.hash(txt) if not id else id
+		self.id=pytxt.now() if not id else id
 		print ">> gen {0} from TXT...".format(self.id)
 
 		self.dbfn=None
