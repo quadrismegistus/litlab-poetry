@@ -1,7 +1,7 @@
 litlab-poetry
 =============
 
-***This repository has been superceded by [Poesy](https://github.com/quadrismegistus/poesy). It is recommended you use [Poesy](https://github.com/quadrismegistus/poesy) instead. This repository is preserved in its current form in case it is useful.***
+***This repository has been superceded by [Poesy](https://github.com/quadrismegistus/poesy). It is recommended you use [Poesy](https://github.com/quadrismegistus/poesy) instead. This repository is preserved in its current form for historical reasons.***
 
 Code used in the [Literary Lab](http://litlab.stanford.edu)'s [Trans-historical Poetry Project](http://litlab.stanford.edu/?page_id=13), involving myself ([Ryan Heuser](http://twitter.com/quadrismegistus)), [Mark Algee-Hewitt](https://twitter.com/mark_a_h), Maria Kraxenberger, J.D. Porter, Jonny Sensenbaugh, and Justin Tackett. We presented the project at DH2014 in Lausanne. The abstract is [here](http://dharchive.org/paper/DH2014/Paper-788.xml), but a better source of information is our slideshow (with notes) [here](https://docs.google.com/presentation/d/1KyCi4s6P1fE4D3SlzlZPnXgPjwZvyv_Vt-aU3tlb24I/edit?usp=sharing). The project has been going on for 2+ years, and we are currently in the process of drafting up the project as an article for submission to a journal. Feel free to use this code for any purpose whatever, but please provide attribution back to (for now) this webpage and the aforementioned authors.
 
